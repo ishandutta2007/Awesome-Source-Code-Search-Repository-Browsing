@@ -5,10 +5,13 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing?style=social&color=white" alt="GitHub Stars"></a>
   <a href="https://github.com/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a>
   <a href="https://github.com/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome"></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
 
 ## 🌐 Curated List of SaaS Products & Open-Source GitHub Projects
@@ -31,6 +34,8 @@ This repository tracks top-tier **SaaS platforms** and **open-source projects** 
   - [🏢 Self-Hosted Code Search Platforms](#-self-hosted-code-search-platforms)
   - [🖥️ Specialized CLI & Navigation Utilities](#️-specialized-cli--navigation-utilities)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support](#-support)
+- [⭐ Star History](#-star-history)
 - [⚖️ Disclaimer & Security Guidelines](#️-disclaimer--security-guidelines)
 
 ---
@@ -115,6 +120,25 @@ Contributions are warmly welcomed! Help keep this source code search ecosystem d
 3. 📝 Update `README.md` following the established table format and badges.
 4. 🔍 Ensure pricing, company metrics, and GitHub star counts reflect current data.
 5. 🚀 Submit a **Pull Request** with a descriptive summary of your additions.
+
+---
+
+## 💖 Support
+
+If you find this repository helpful for discovering and evaluating code search solutions, please consider supporting the project:
+
+- ⭐ **Star this repository** on GitHub to help others find it!
+- 🍴 **Fork and contribute** by adding new tools, features, or price updates.
+- 📢 **Share** with your network, team, and developer communities.
+- ☕ **Buy me a coffee / Sponsor**: Support ongoing maintenance directly via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+Thank you so much for your support! 🙏
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing&type=date&legend=top-left)
 
 ---
 
