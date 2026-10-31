@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing?style=social&color=white" alt="GitHub Stars"></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing?style=social&color=white" alt="GitHub_Stars"></a>
   <a href="https://github.com/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a>
   <a href="https://github.com/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome"></a>
@@ -69,9 +69,9 @@ Open-source code search tooling provides battle-tested indexing engines, self-ho
 
 ### 🏆 Top Open-Source Projects (Ranked by Stars)
 
-Every repository below is sorted in descending order by its community star count. Click the white star badge to view live stargazers! ⭐
+Every repository below is sorted in descending order by its community Stars_Count. Click the white Stars_Badge to view live stargazers! ⭐
 
-| Rank 🏅 | Repository 📦 | GitHub Star Count ⭐ | License 📜 | Tech Stack ⚙️ | Description 💡 |
+| Rank 🏅 | Repository 📦 | GitHub Stars_Count ⭐ | License 📜 | Tech Stack ⚙️ | Description 💡 |
 | :---: | :--- | :--- | :--- | :--- | :--- |
 | **1** | **[ripgrep](https://github.com/BurntSushi/ripgrep)** | [![Stars](https://img.shields.io/github/stars/BurntSushi/ripgrep?style=social&color=white)](https://github.com/BurntSushi/ripgrep/stargazers) | Unlicense / MIT | Rust | Fast line-oriented CLI search utility that respects `.gitignore` rules, serving as the foundational search backend for modern developer workflows. |
 | **2** | **[bloop](https://github.com/BloopAI/bloop)** | [![Stars](https://img.shields.io/github/stars/BloopAI/bloop?style=social&color=white)](https://github.com/BloopAI/bloop/stargazers) | Apache-2.0 | Rust / TypeScript | AI-native code search engine providing semantic vector search, regex pattern matching, and contextual natural language codebase comprehension. |
@@ -118,7 +118,7 @@ Contributions are warmly welcomed! Help keep this source code search ecosystem d
 1. 🍴 **Fork** this repository.
 2. 🌿 Create a feature branch: `git checkout -b add-code-search-tool`.
 3. 📝 Update `README.md` following the established table format and badges.
-4. 🔍 Ensure pricing, company metrics, and GitHub star counts reflect current data.
+4. 🔍 Ensure pricing, company metrics, and GitHub Stars_Counts reflect current data.
 5. 🚀 Submit a **Pull Request** with a descriptive summary of your additions.
 
 ---
