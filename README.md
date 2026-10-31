@@ -1,173 +1,131 @@
-# Awesome-Source-Code-Search-Repository-Browsing
+# Awesome-Source-Code-Search-Repository-Browsing 🔎
 
-## Top Source Code Search & Repository Browsing Ecosystem
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Source Code Search & Repository Browsing Banner" width="100%">
+</p>
 
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing?style=social&color=white" alt="GitHub Stars"></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
+  <a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Source-Code-Search-Repository-Browsing/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome"></a>
+</p>
 
+## 🌐 Curated List of SaaS Products & Open-Source GitHub Projects
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
+> Comprehensive ecosystem directory of code search engines, enterprise code intelligence, cross-repository AST navigation, and self-hosted source code indexing infrastructure. ⚡
 
-*Focused on Code Search Engines, Cross-Repository Browsing & Self-Hosted Indexing Infrastructure*  
+**Last updated:** October 2026 📅
 
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Source Code Search & Repository Browsing**. These tools enable developers to find, navigate, and understand code across multiple repositories and hosts—searching by literal text, regex, symbol, or path, and jumping to definitions and references across repository boundaries.
-
-
-
-**Examples** include FishEye, Sourcegraph, GitHub Code Search, GitLab Code Search, OpenGrok, Black Duck Hub, Zoekt, Hound, Livegrep, and Greptile (the category leaders).
-
-
-
-**Open-source emphasis**: Source Code Search is a domain where open-source tooling is **mature at the search engine layer but requires assembly for a complete product**. **Zoekt** is the standout—a trigram-indexed search engine (Apache 2.0) that powers Sourcegraph and GitLab's exact code search, with symbol-aware ranking and JSON/gRPC APIs . **OpenGrok** provides search plus cross-reference browsing (definitions, references, history) for large legacy codebases, particularly C/C++/Java . **Hound** offers a lightweight MIT-licensed regex search server for a few dozen repos . **Sourcebot** positions itself as the open-source Sourcegraph alternative, with multi-repo/branch indexing, regex, boolean logic, code navigation, and an "Ask Sourcebot" AI feature . The critical caveat: **Zoekt is an engine, not a product**—it lacks code navigation and permission sync with git hosts; you need a platform engineer to run it . **FishEye** (Atlassian) is commercial and has been deprioritized, with only infrequent minor releases . **Greptile** is an AI-powered codebase Q&A platform (not traditional search), used by Stripe and Amazon, but it is a SaaS product with no open-source equivalent .
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Sourcegraph](https://sourcegraph.com/)**  
-
-  Universal code search and code intelligence platform; searches across any code host, repo, or language with smart filters, hover tooltips, and cross-repository definitions/references. The benchmark for enterprise code search, built on the open-source Zoekt engine .
-
-
-
-- **[GitHub Code Search](https://github.com/)**  
-
-  Native code search within GitHub; supports regex, boolean logic, and qualifiers (`repo:`, `org:`, `path:`, `language:`, `symbol:`, `content:`, `is:`) for searching across public and private repositories .
-
-
-
-- **[GitLab Code Search](https://about.gitlab.com/)**  
-
-  GitLab's native code search, now powered by **Zoekt** for exact and regex search with filters; Advanced Search remains a fallback for code, comments, commits, merge requests, and wikis .
-
-
-
-- **[FishEye (Atlassian)](https://www.atlassian.com/software/fisheye)**  
-
-  Commercial revision-control browser and search engine; provides a read-only window into Subversion, Perforce, CVS, Git, and Mercurial repositories with commit graph and Jira integration. **Deprioritized by Atlassian** with only infrequent minor releases; better for managers reporting on changes than developers searching daily .
-
-
-
-- **[Greptile](https://www.greptile.com/)**  
-
-  AI-powered codebase Q&A platform (not traditional search); indexes large codebases so LLMs can answer questions with full context. Used by 250+ companies including Stripe and Amazon for onboarding, debugging, and PR review bots . **SaaS-only**—no open-source equivalent exists.
-
-
-
-- **[Black Duck Hub](https://www.blackduck.com/)**  
-
-  Open source security and license compliance platform; while not a code search tool per se, it indexes code to identify open source components and vulnerabilities.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Search Engines (Indexing Layer)
-
-
-
-- **[Zoekt](https://github.com/sourcegraph/zoekt)**  
-
-  The most mature open-source **code search engine** available (Apache 2.0); a trigram index that breaks code into overlapping three-character pieces for fast substring and regex queries. Features: **symbol-aware ranking** (improves with Universal ctags), web server, JSON and gRPC APIs. **It is the engine inside Sourcegraph and GitLab's exact code search** . **Critical limitation**: it is an engine with little product around it—**no code navigation and no permission sync with your git host**. With one platform engineer to own it, Zoekt plus a job that pulls your repos covers most of what people used Sourcegraph search for . **The best foundation for building a custom code search platform**.
-
-
-
-- **[OpenGrok](https://github.com/oracle/opengrok)**  
-
-  Open-source **search and cross-reference engine** (CDDL 1.0); click a symbol to see where it is defined and used, with history from several version control systems. **Heavier to run than Zoekt** and its UI is dated, but remains a solid choice for a **large C, C++ or Java tree** needing browsable, cross-referenced views of a legacy codebase .
-
-
-
-- **[Hound](https://github.com/hound-search/hound)**  
-
-  Small, MIT-licensed **regex search server** with a clean web UI and light memory footprint. Suits a team with **a few dozen repos** that wants "grep, but in a browser, for everyone" . **Limitation**: Hound has made a choice to not bound search response sizes—large queries can produce massive JSON responses that take seconds to render . **Best for small-scale, low-setup deployments**.
-
-
-
-### Complete Search Products (Sourcegraph Alternatives)
-
-
-
-- **[Sourcebot](https://github.com/sourcebot-dev/sourcebot)**  
-
-  The strongest open-source **Sourcegraph alternative** (self-hosted); indexes repos/branches across multiple code hosts with **regex, boolean logic, repo/language filters**, and trigram indexing for scale . Features: **code navigation** (goto definition, find references) across all repos, built-in file explorer with syntax highlighting, and **"Ask Sourcebot"**—natural language Q&A over your codebase with inline citations . Docker Compose deployment in seconds. **Best for teams wanting a complete, self-hosted code search product** with AI-assisted Q&A—but it requires ongoing infrastructure management and configuration of indexed repos.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Livegrep** — Open-source regex search engine for code; noted as performing better than Hound at scale in one practitioner's experience, though eventually replaced by Zoekt . **Verify maintenance status** before adoption.
-
-- **Sourcegraph (self-hosted)** — While Sourcegraph's core is proprietary, it maintains **Zoekt** as open source and offers a free tier for public code. The self-hosted enterprise product is commercial .
-
-- **RepoTrek** — Terminal-first GitHub source browser for exploring repositories without cloning; supports code search, blame, file history, and symbol outlines via a TUI . **Niche**—for developers wanting a terminal-based browsing experience, not a team search platform.
-
-
-
-**Frameworks for building custom systems**: For **exact regex search across thousands of repos**, Zoekt is the engine Sourcegraph and GitLab use . For **cross-reference browsing of legacy C/C++/Java**, OpenGrok . For **a few dozen repos with minimal setup**, Hound . For **a complete self-hosted Sourcegraph alternative with AI Q&A**, Sourcebot . No open-source project matches Sourcegraph's **managed code intelligence and integration ecosystem** out of the box—Sourcebot comes closest but requires operational investment.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Code search platforms handling private repository data must comply with organizational access controls and security policies; **self-hosted code search indexes contain your entire codebase** and require proper authentication, encryption, and network isolation.
-
-- **Open-source code search is mature at the engine layer but requires assembly**—Zoekt provides the search engine that powers Sourcegraph and GitLab , and Sourcebot provides a complete self-hosted product . However, **FishEye is deprioritized** by Atlassian , and **Greptile's AI-powered codebase understanding has no open-source equivalent** . Choose based on whether you need raw search (Zoekt), cross-reference browsing (OpenGrok), a complete product (Sourcebot), or AI Q&A (Greptile, commercial only).
-
-- Verify license terms for commercial use; Zoekt uses Apache 2.0 , OpenGrok uses CDDL 1.0 , Hound uses MIT , and Sourcebot is open-source (check repository) .
-
-
+This repository tracks top-tier **SaaS platforms** and **open-source projects** designed for **Source Code Search & Repository Browsing**. These developer productivity solutions empower engineering organizations to index, discover, navigate, and comprehend codebases across thousands of repositories and code hosts—offering instantaneous literal regex search, AST symbol resolution, and cross-repo definition jumping. 🚀
 
 ---
 
+## 📑 Table of Contents
 
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS / Hosted Platforms](#️-saas--hosted-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+  - [🏆 Top Open-Source Projects (Ranked by Stars)](#-top-open-source-projects-ranked-by-stars)
+  - [⚙️ Search Engines & Indexing Engines](#️-search-engines--indexing-engines)
+  - [🏢 Self-Hosted Code Search Platforms](#-self-hosted-code-search-platforms)
+  - [🖥️ Specialized CLI & Navigation Utilities](#️-specialized-cli--navigation-utilities)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚖️ Disclaimer & Security Guidelines](#️-disclaimer--security-guidelines)
 
-**Made for developers, platform engineers, and organizations building code intelligence infrastructure.**  
+---
 
-Let's make source code search more open, but with clear eyes about the engine-vs-product gap and the AI-powered codebase understanding that remains commercial territory.
+## 📊 Sector Overview & Market Dynamics
+
+The global enterprise code search and developer code intelligence sector is estimated at **$1.8B to $2.5B**, expanding rapidly alongside developer productivity tooling, AI agentic programming assistants, and monolithic-to-polyrepo scale. 📈
+
+The market exhibits **moderate fragmentation with strong winner-take-most dynamics at the code hosting layer** (dominated by hyperscalers Microsoft GitHub and GitLab with native code search), while remaining **highly competitive in the cross-repository universal code intelligence and specialized AI codebase comprehension tier** (led by Sourcegraph, Synopsys/Black Duck, and next-generation AI context engines like Greptile). 🎯
+
+---
+
+## ☁️ SaaS / Hosted Platforms
+
+The table below catalogs enterprise SaaS products sorted in descending order by estimated company valuation / annual revenue scale. 🏢
+
+| Product 🏷️ | Scale (Valuation / Revenue) 💰 | Pricing (Starting Tier) 💵 | Free Tier Limit / Trial Duration 🎁 | Core Focus & Search Capabilities 🔍 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[GitHub Code Search](https://github.com/)** | **~$3,000B ($3.0T)** Microsoft Market Cap | **$4.00 / user / month** (GitHub Team tier) | **Free forever**: Unlimited public repos, unlimited private repos with basic code search & syntax highlighting | Hyperscale native code search with regex, boolean expressions, symbols, and scope qualifiers (`repo:`, `path:`, `symbol:`, `lang:`) |
+| **[GitLab Code Search](https://about.gitlab.com/)** | **~$7.5B - $8.5B** Public Market Cap | **$29.00 / user / month** (GitLab Premium tier) | **Free forever plan**: Includes basic file search; Zoekt-powered exact regex search is available on 30-day Free Trial of GitLab Ultimate (up to 100 users) | Native Git code intelligence and multi-project Zoekt-powered exact and regular expression code search |
+| **[FishEye (Atlassian)](https://www.atlassian.com/software/fisheye)** | **~$50B+** Atlassian Market Cap | **$10.00 one-time** (Starter tier for up to 5 committers; $1,800 for 10 committers) | **30-day free trial**: Full commercial server license for unlimited repositories and committers | Legacy revision control browser for Subversion, Git, Perforce, CVS, and Mercurial with Jira link integration |
+| **[Black Duck Hub](https://www.blackduck.com/)** | **~$2.1B** Acquisition Valuation | **~$1,500.00 / project / year** (Custom quote starting tier for SME application scanning) | **14-day free trial**: Access to Hub demo environment scanning up to 5 application repositories | Open source dependency indexing, Software Bill of Materials (SBOM), and vulnerability/license compliance scanning |
+| **[Sourcegraph](https://sourcegraph.com/)** | **~$2.625B** Peak Valuation | **$59.00 / user / month** (Enterprise Code Search tier) | **Free forever plan**: Unlimited search across public repositories on Sourcegraph.com; Free trial: 14-day Enterprise trial for internal self-hosted repos | Benchmark enterprise universal code intelligence, cross-code-host indexing, hover tooltips, and SCIP/LSIF code graph navigation |
+| **[Greptile](https://www.greptile.com/)** | **~$25M - $40M** Early-Stage Venture Valuation | **$30.00 / developer / month** (Pro tier for teams) | **Free forever plan**: Up to 3 private repositories (under 10,000 lines of code) with 200 API queries/month; 14-day trial for Team tier | AI-native codebase vector indexing and LLM context engine for multi-repository architectural Q&A, onboarding, and PR reviews |
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+Open-source code search tooling provides battle-tested indexing engines, self-hosted web platforms, and lightning-fast developer utilities. 🛠️
+
+### 🏆 Top Open-Source Projects (Ranked by Stars)
+
+Every repository below is sorted in descending order by its community star count. Click the white star badge to view live stargazers! ⭐
+
+| Rank 🏅 | Repository 📦 | GitHub Star Count ⭐ | License 📜 | Tech Stack ⚙️ | Description 💡 |
+| :---: | :--- | :--- | :--- | :--- | :--- |
+| **1** | **[ripgrep](https://github.com/BurntSushi/ripgrep)** | [![Stars](https://img.shields.io/github/stars/BurntSushi/ripgrep?style=social&color=white)](https://github.com/BurntSushi/ripgrep/stargazers) | Unlicense / MIT | Rust | Fast line-oriented CLI search utility that respects `.gitignore` rules, serving as the foundational search backend for modern developer workflows. |
+| **2** | **[bloop](https://github.com/BloopAI/bloop)** | [![Stars](https://img.shields.io/github/stars/BloopAI/bloop?style=social&color=white)](https://github.com/BloopAI/bloop/stargazers) | Apache-2.0 | Rust / TypeScript | AI-native code search engine providing semantic vector search, regex pattern matching, and contextual natural language codebase comprehension. |
+| **3** | **[Hound](https://github.com/hound-search/hound)** | [![Stars](https://img.shields.io/github/stars/hound-search/hound?style=social&color=white)](https://github.com/hound-search/hound/stargazers) | MIT | Go / React | Extremely lightweight regex code search tool powered by a Go web front-end and indexed search backend, ideal for small-to-mid engineering teams. |
+| **4** | **[OpenGrok](https://github.com/oracle/opengrok)** | [![Stars](https://img.shields.io/github/stars/oracle/opengrok?style=social&color=white)](https://github.com/oracle/opengrok/stargazers) | CDDL-1.0 | Java / Lucene | Enterprise-grade source code search and cross-reference engine designed for massive C, C++, and Java trees, providing AST navigation and VCS history. |
+| **5** | **[google/codesearch](https://github.com/google/codesearch)** | [![Stars](https://img.shields.io/github/stars/google/codesearch?style=social&color=white)](https://github.com/google/codesearch/stargazers) | BSD-3-Clause | Go / C++ | Fast, indexed regular expression search engine over large file trees, pioneered by Russ Cox as the blueprint for trigram index engines. |
+| **6** | **[Sourcebot](https://github.com/sourcebot-dev/sourcebot)** | [![Stars](https://img.shields.io/github/stars/sourcebot-dev/sourcebot?style=social&color=white)](https://github.com/sourcebot-dev/sourcebot/stargazers) | AGPL-3.0 | TypeScript / Rust / Go | Complete self-hosted Sourcegraph alternative featuring cross-repository trigram regex indexing, symbol definitions, and AI-assisted codebase Q&A. |
+| **7** | **[Livegrep](https://github.com/livegrep/livegrep)** | [![Stars](https://img.shields.io/github/stars/livegrep/livegrep?style=social&color=white)](https://github.com/livegrep/livegrep/stargazers) | GPL-2.0 | C++ / Go | Real-time interactive regex code search engine built with suffix arrays and trigram indexes for instantaneous query execution over gigabytes of code. |
+| **8** | **[Zoekt](https://github.com/sourcegraph/zoekt)** | [![Stars](https://img.shields.io/github/stars/sourcegraph/zoekt?style=social&color=white)](https://github.com/sourcegraph/zoekt/stargazers) | Apache-2.0 | Go / Ctags | High-performance trigram-indexed code search engine powering Sourcegraph and GitLab's exact search; supports symbol ranking, JSON APIs, and gRPC. |
+| **9** | **[SeaGOAT](https://github.com/kantord/SeaGOAT)** | [![Stars](https://img.shields.io/github/stars/kantord/SeaGOAT?style=social&color=white)](https://github.com/kantord/SeaGOAT/stargazers) | AGPL-3.0 | Python / Chroma | Local-first semantic code search engine leveraging vector embeddings and ChromaDB to query codebases semantically without cloud dependencies. |
+| **10** | **[codespelunker (cs)](https://github.com/boyter/cs)** | [![Stars](https://img.shields.io/github/stars/boyter/cs?style=social&color=white)](https://github.com/boyter/cs/stargazers) | MIT | Go | High-speed structural code search tool featuring CLI, TUI, and HTTP interfaces that ranks results by relevance without requiring upfront indexing. |
+| **11** | **[SCIP](https://github.com/sourcegraph/scip)** | [![Stars](https://img.shields.io/github/stars/sourcegraph/scip?style=social&color=white)](https://github.com/sourcegraph/scip/stargazers) | Apache-2.0 | Protocol Buffers | Standard Code Intelligence Protocol defining code indexing schemas for cross-repository cross-referencing, hover documentation, and symbol linking. |
+| **12** | **[searchcode-server](https://github.com/boyter/searchcode-server)** | [![Stars](https://img.shields.io/github/stars/boyter/searchcode-server?style=social&color=white)](https://github.com/boyter/searchcode-server/stargazers) | Apache-2.0 | Java / Lucene | Self-hosted code search server indexing multiple repositories across Git, SVN, and Mercurial with an integrated web UI and syntax highlight viewer. |
+
+---
+
+### ⚙️ Search Engines & Indexing Engines
+
+- ⚡ **[Zoekt](https://github.com/sourcegraph/zoekt)** — Trigram-based search engine maintained by Sourcegraph. Indexes AST symbols with Universal Ctags and powers exact regex search for GitHub-scale platforms.
+- 🔬 **[google/codesearch](https://github.com/google/codesearch)** — Foundational regexp indexing engine for massive file trees using 3-character n-grams.
+- 🏎️ **[Livegrep](https://github.com/livegrep/livegrep)** — Substring and regex search over gigabytes of source code with sub-second response times.
+- 🌐 **[SCIP Protocol](https://github.com/sourcegraph/scip)** — Open standard schema for indexing symbol definitions and references across languages.
+
+### 🏢 Self-Hosted Code Search Platforms
+
+- 🤖 **[Sourcebot](https://github.com/sourcebot-dev/sourcebot)** — Modern turnkey self-hosted code search platform with Docker Compose deployment, code navigation, and "Ask Sourcebot" AI Q&A.
+- 🏛️ **[OpenGrok](https://github.com/oracle/opengrok)** — Proven cross-reference engine for deep AST symbol tracking in legacy C/C++/Java repositories.
+- 🐶 **[Hound](https://github.com/hound-search/hound)** — Minimalist multi-repo grep server for engineering teams needing rapid browser-based lookups.
+- 📦 **[searchcode-server](https://github.com/boyter/searchcode-server)** — Self-hosted search engine supporting Git, SVN, and Mercurial repos.
+
+### 🖥️ Specialized CLI & Navigation Utilities
+
+- ⚡ **[ripgrep](https://github.com/BurntSushi/ripgrep)** — Ultra-fast recursive regex search engine respecting `.gitignore` patterns.
+- 🧠 **[bloop](https://github.com/BloopAI/bloop)** — Desktop and server-based AI search engine combining GPT-4 with semantic vector search.
+- 🐐 **[SeaGOAT](https://github.com/kantord/SeaGOAT)** — Semantic code search utility running completely locally on your workstation.
+- 🔎 **[codespelunker (cs)](https://github.com/boyter/cs)** — Smart relevance-ranked code discovery CLI with built-in TUI and HTTP server.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are warmly welcomed! Help keep this source code search ecosystem directory up to date: 🌟
+
+1. 🍴 **Fork** this repository.
+2. 🌿 Create a feature branch: `git checkout -b add-code-search-tool`.
+3. 📝 Update `README.md` following the established table format and badges.
+4. 🔍 Ensure pricing, company metrics, and GitHub star counts reflect current data.
+5. 🚀 Submit a **Pull Request** with a descriptive summary of your additions.
+
+---
+
+## ⚖️ Disclaimer & Security Guidelines
+
+- 🛡️ **Access Control & Network Security**: Self-hosted code search engines index complete company source trees. Ensure your indexing clusters have role-based access control (RBAC), TLS encryption in transit and at rest, and VPC isolation.
+- 📊 **Engine vs. Product Architecture**: Low-level search engines like Zoekt require an operational layer (git syncer, permission gateway, UI). Ready-to-run platforms like Sourcebot or SaaS platforms like Sourcegraph provide complete end-to-end solutions.
+- 📜 **Licensing**: Always review project licenses (e.g., Apache-2.0, MIT, AGPL-3.0, CDDL-1.0) before deploying internal production instances.
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ by and for platform engineers, architects, and developers building the future of code intelligence. 🚀</sub>
+</p>

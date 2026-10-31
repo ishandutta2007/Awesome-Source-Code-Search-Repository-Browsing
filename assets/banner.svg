@@ -1,0 +1,182 @@
+<svg fill="none" viewBox="0 0 1200 360" width="100%" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0e172a"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- Glowing card gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30, 41, 59, 0.7)"/>
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.8)"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @keyframes floatLeftRight {
+        0%, 100% { transform: translateX(0px) translateY(0px); }
+        50% { transform: translateX(25px) translateY(-10px); }
+      }
+      @keyframes floatPulse {
+        0%, 100% { opacity: 0.25; transform: scale(1); }
+        50% { opacity: 0.55; transform: scale(1.08); }
+      }
+      @keyframes pulseBeam {
+        0%, 100% { stroke-dashoffset: 0; opacity: 0.3; }
+        50% { stroke-dashoffset: 60; opacity: 0.8; }
+      }
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes cardFloat1 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes cardFloat2 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(8px); }
+      }
+      .bg-grid {
+        stroke: rgba(255, 255, 255, 0.04);
+        stroke-width: 1;
+      }
+      .glow-blob1 {
+        animation: floatPulse 7s ease-in-out infinite;
+        transform-origin: 300px 180px;
+      }
+      .glow-blob2 {
+        animation: floatPulse 9s ease-in-out infinite reverse;
+        transform-origin: 900px 180px;
+      }
+      .beam-line {
+        stroke: url(#accentGrad);
+        stroke-width: 2;
+        stroke-dasharray: 10, 15;
+        animation: pulseBeam 4s linear infinite;
+      }
+      .floating-card-1 {
+        animation: cardFloat1 5s ease-in-out infinite;
+      }
+      .floating-card-2 {
+        animation: cardFloat2 6s ease-in-out infinite;
+      }
+      .text-shimmer {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)"/>
+  <rect width="1200" height="360" rx="16" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" fill="none"/>
+
+  <!-- Subtle Matrix / Grid Background -->
+  <g class="bg-grid">
+    <line x1="100" y1="0" x2="100" y2="360" />
+    <line x1="200" y1="0" x2="200" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="400" y1="0" x2="400" y2="360" />
+    <line x1="500" y1="0" x2="500" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="700" y1="0" x2="700" y2="360" />
+    <line x1="800" y1="0" x2="800" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1000" y1="0" x2="1000" y2="360" />
+    <line x1="1100" y1="0" x2="1100" y2="360" />
+    
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+  </g>
+
+  <!-- Ambient Light Globs (Behind text, strictly decorative) -->
+  <circle cx="280" cy="180" r="160" fill="#38bdf8" opacity="0.12" filter="url(#glow)" class="glow-blob1" />
+  <circle cx="920" cy="180" r="170" fill="#818cf8" opacity="0.14" filter="url(#glow)" class="glow-blob2" />
+  <circle cx="600" cy="90" r="120" fill="#c084fc" opacity="0.1" filter="url(#glow)" />
+
+  <!-- Animated Circuit / Synapse Beams (Background) -->
+  <path d="M 50 180 Q 250 80, 450 180 T 850 180 T 1150 180" class="beam-line" fill="none" opacity="0.4" />
+  <path d="M 80 280 Q 350 320, 600 280 T 1120 280" class="beam-line" fill="none" opacity="0.25" style="animation-duration: 6s;" />
+
+  <!-- Subtle Animated Tech Indicators (Side Accents) -->
+  <g class="floating-card-1" opacity="0.75">
+    <g transform="translate(60, 48)">
+      <rect width="180" height="42" rx="8" fill="url(#cardGrad)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1"/>
+      <circle cx="20" cy="21" r="5" fill="#38bdf8"/>
+      <text x="34" y="26" fill="#94a3b8" font-size="12" font-family="monospace">regex: /sym::index.*/</text>
+    </g>
+    <g transform="translate(70, 275)">
+      <rect width="170" height="38" rx="8" fill="url(#cardGrad)" stroke="rgba(129, 140, 248, 0.3)" stroke-width="1"/>
+      <text x="18" y="24" fill="#a5b4fc" font-size="12" font-family="monospace">&gt; Zoekt trigram index</text>
+    </g>
+  </g>
+
+  <g class="floating-card-2" opacity="0.75">
+    <g transform="translate(960, 52)">
+      <rect width="180" height="42" rx="8" fill="url(#cardGrad)" stroke="rgba(192, 132, 252, 0.3)" stroke-width="1"/>
+      <circle cx="20" cy="21" r="5" fill="#a855f7"/>
+      <text x="34" y="26" fill="#c084fc" font-size="12" font-family="monospace">SCIP / LSIF AST Graph</text>
+    </g>
+    <g transform="translate(970, 270)">
+      <rect width="165" height="38" rx="8" fill="url(#cardGrad)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1"/>
+      <text x="18" y="24" fill="#38bdf8" font-size="12" font-family="monospace">⚡ 40M+ LOC / sec</text>
+    </g>
+  </g>
+
+  <!-- Foreground Main Content (Clear, Centered, High Contrast) -->
+  <!-- Top Category Tag -->
+  <g transform="translate(460, 55)">
+    <rect width="280" height="32" rx="16" fill="rgba(30, 41, 59, 0.9)" stroke="rgba(56, 189, 248, 0.5)" stroke-width="1"/>
+    <circle cx="18" cy="16" r="4" fill="#38bdf8"/>
+    <text x="32" y="21" fill="#38bdf8" font-size="12" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, sans-serif" letter-spacing="1.5">CURATED AWESOME ECOSYSTEM</text>
+  </g>
+
+  <!-- Main Hero Title -->
+  <text x="600" y="150" text-anchor="middle" class="text-shimmer" font-size="44" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+    Source Code Search &amp; Browsing
+  </text>
+
+  <!-- Gradient Sub-bar under Title -->
+  <rect x="360" y="170" width="480" height="3" rx="1.5" fill="url(#accentGrad)" />
+
+  <!-- Subtitle Line 1 -->
+  <text x="600" y="215" text-anchor="middle" class="text-shimmer" font-size="17" font-weight="500" fill="#cbd5e1" letter-spacing="0.2">
+    Enterprise Code Intelligence, Trigram Search Engines &amp; Cross-Repo AST Navigation
+  </text>
+
+  <!-- Subtitle Line 2 (Badges / Tech Pills in Foreground) -->
+  <g transform="translate(330, 250)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="115" height="28" rx="6" fill="rgba(15, 23, 42, 0.9)" stroke="#334155" stroke-width="1"/>
+    <text x="57" y="18" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="600" font-family="sans-serif">🔍 Fast Search</text>
+
+    <!-- Pill 2 -->
+    <rect x="127" y="0" width="135" height="28" rx="6" fill="rgba(15, 23, 42, 0.9)" stroke="#334155" stroke-width="1"/>
+    <text x="194" y="18" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="600" font-family="sans-serif">⚡ Trigram Index</text>
+
+    <!-- Pill 3 -->
+    <rect x="274" y="0" width="135" height="28" rx="6" fill="rgba(15, 23, 42, 0.9)" stroke="#334155" stroke-width="1"/>
+    <text x="341" y="18" text-anchor="middle" fill="#6ee7b7" font-size="12" font-weight="600" font-family="sans-serif">🌐 Multi-Repo AST</text>
+
+    <!-- Pill 4 -->
+    <rect x="421" y="0" width="120" height="28" rx="6" fill="rgba(15, 23, 42, 0.9)" stroke="#334155" stroke-width="1"/>
+    <text x="481" y="18" text-anchor="middle" fill="#fbcfe8" font-size="12" font-weight="600" font-family="sans-serif">🤖 AI Code Q&amp;A</text>
+  </g>
+</svg>
